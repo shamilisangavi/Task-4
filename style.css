@@ -1,0 +1,110 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background: #444;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #666;
+}
+
+.container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.sidebar {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.content {
+  flex: 3;
+  background: #ddd;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* ✅ Makes images responsive */
+  border-radius: 6px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack nav links */
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column; /* Stack sidebar + content */
+  }
+
+  header {
+    font-size: 20px;
+  }
+
+  nav a {
+    border-top: 1px solid #555;
+  }
+}
+
+/* 📱 Extra Small Devices (Phones < 480px) */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  header {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  nav a {
+    padding: 12px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
